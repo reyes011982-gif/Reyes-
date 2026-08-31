@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Ximena 🌹❤️</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+min-height:100vh;
+font-family:Georgia,serif;
+background:linear-gradient(135deg,#ffd1df,#fff0f5,#ffc4d6);
+color:#70213d;
+overflow-x:hidden;
+}
+
+.container{
+width:92%;
+max-width:520px;
+margin:auto;
+padding:35px 0;
+text-align:center;
+}
+
+.screen{
+display:none;
+animation:aparecer 1.2s ease;
+}
+
+.screen.active{
+display:block;
+}
+
+@keyframes aparecer{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1{
+font-size:32px;
+color:#a72d55;
+}
+
+p{
+font-size:18px;
+line-height:1.7;
+}
+
+button{
+background:#c93665;
+color:white;
+border:0;
+border-radius:30px;
+padding:15px 28px;
+font-size:17px;
+margin-top:20px;
+box-shadow:0 5px 20px #a72d5540;
+}
+
+button:active{
+transform:scale(.95);
+}
+
+/* CORAZÓN */
+
+.big-heart{
+font-size:75px;
+animation:latido 1.3s infinite;
+}
+
+@keyframes latido{
+0%,100%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.2);
+}
+}
+
+/* SOBRE */
+
+.envelope{
+width:280px;
+height:185px;
+background:#f39ab7;
+margin:35px auto;
+position:relative;
+border-radius:8px;
+box-shadow:0 12px 30px #8d345340;
+}
+
+.envelope:before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+border-left:140px solid transparent;
+border-right:140px solid transparent;
+border-top:105px solid #dc7095;
+}
+
+.envelope:after{
+content:"❤️";
+position:absolute;
+font-size:45px;
+left:116px;
+top:115px;
+}
+
+/* CARTA */
+
+.letter{
+background:#fffdfd;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 35px #7c294520;
+text-align:left;
+border:2px solid #f4b1c6;
+}
+
+.letter h2{
+text-align:center;
+color:#bd315d;
+}
+
+.signature{
+text-align:right;
+font-style:italic;
+margin-top:30px;
+}
+
+/* ROSAS */
+
+.rose{
+position:fixed;
+font-size:28px;
+top:-50px;
+animation:caer linear forwards;
+pointer-events:none;
+z-index:10;
+}
+
+@keyframes caer{
+
+0%{
+transform:translateY(-50px) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
+}
+
+}
+
+/* CORAZONES */
+
+.heart{
+position:fixed;
+bottom:-40px;
+font-size:25px;
+animation:subir 5s linear forwards;
+pointer-events:none;
+}
+
+@keyframes subir{
+
+0%{
+transform:translateY(0) scale(1);
+opacity:1;
+}
+
+100%{
+transform:translateY(-110vh) scale(1.5);
+opacity:0;
+}
+
+}
+
+.flower-title{
+font-size:35px;
+letter-spacing:5px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+<!-- INICIO -->
+
+<section class="screen active" id="inicio">
+
+<div class="flower-title">
+🌹 🌹 🌹
+</div>
+
+<div class="big-heart">
+❤️
+</div>
+
+<h1>Hola, Ximena...</h1>
+
+<p>
+Hay algo que preparé especialmente para ti.
+<br><br>
+Pero quiero que lo descubras poco a poco...
+</p>
+
+<button onclick="mostrar('sobre')">
+Abrir mi sorpresa 💌
+</button>
+
+</section>
+
+
+<!-- SOBRE -->
+
+<section class="screen" id="sobre">
+
+<div class="flower-title">
+🌹 💗 🌹
+</div>
+
+<h1>Una pequeña sorpresa...</h1>
+
+<div class="envelope"></div>
+
+<p>
+Antes de abrirlo solo quiero pedirte una cosa:
+<br><br>
+
+<b>
+Quédate hasta el final.
+</b>
+</p>
+
+<button onclick="mostrar('mensaje1')">
+Abrir el sobre 💌
+</button>
+
+</section>
+
+
+<!-- MENSAJE 1 -->
+
+<section class="screen" id="mensaje1">
+
+<div class="big-heart">
+💗
+</div>
+
+<h1>Primero...</h1>
+
+<p>
+Quiero que sepas que estoy muy orgullosa de ti.
+<br><br>
+
+De todo lo que has conseguido,
+de cada esfuerzo que has hecho
+y de la persona en la que te estás convirtiendo.
+</p>
+
+<button onclick="mostrar('mensaje2')">
+Continuar 🌹
+</button>
+
+</section>
+
+
+<!-- MENSAJE 2 -->
+
+<section class="screen" id="mensaje2">
+
+<div class="flower-title">
+🌹 🌹 🌹
+</div>
+
+<h1>También quiero decirte algo...</h1>
+
+<p>
+No quiero esperar a que suceda algo malo
+para demostrarte lo que siento.
+<br><br>
+
+Quiero hacerlo ahora.
+<br><br>
+
+Con hechos.
+</p>
+
+<button onclick="mostrar('mensaje3')">
+Hay algo más... ❤️
+</button>
+
+</section>
+
+
+<!-- MENSAJE 3 -->
+
+<section class="screen" id="mensaje3">
+
+<div class="big-heart">
+❤️‍🩹
+</div>
+
+<p>
+Quiero esforzarme.
+<br><br>
+
+Quiero estudiar, trabajar, jugar básquet
+y cumplir mis metas.
+<br><br>
+
+Quiero cambiar todo aquello que tenga que cambiar
+y convertirme en una mejor persona.
+</p>
+
+<button onclick="mostrar('carta')">
+Leer la carta 💌
+</button>
+
+</section>
+
+
+<!-- CARTA -->
+
+<section class="screen" id="carta">
+
+<div class="flower-title">
+🌹 🌹 🌹
+</div>
+
+<div class="letter">
+
+<h2>
+Querida Ximena Estefanía ❤️
+</h2>
+
+<p>
+Ximena,
+</p>
+
+<p>
+No sé si te has dado cuenta, pero hay muchas cosas
+que siento y que quizá no siempre he sabido expresar
+de la manera correcta.
+</p>
+
+<p>
+Quiero que sepas que estoy orgullosa de ti.
+De todo lo que has hecho, de cada esfuerzo,
+de cada logro y de todas las veces que has seguido
+adelante.
+</p>
+
+<p>
+También quiero que sepas que estoy dispuesto/a
+a cambiar todo aquello que no te gusta de mí.
+No quiero hacerlo solamente con palabras.
+Quiero demostrarlo con mis acciones.
+</p>
+
+<p>
+Quiero esforzarme en mis estudios,
+empezar mi camino para estudiar enfermería,
+trabajar, jugar básquet y luchar por mis metas.
+Quiero crecer y convertirme en alguien
+de quien pueda sentirme orgulloso/a.
+</p>
+
+<p>
+Sé que quizá me he dado cuenta de algunas cosas
+después de que sucedieron cosas malas,
+pero no quiero seguir esperando a que algo pase
+para hacer lo que debería haber hecho desde antes.
+</p>
+
+<p>
+Quiero cambiar porque sé que es lo correcto.
+Porque quiero hacerlo.
+Porque mi corazón me dice que debo hacerlo.
+</p>
+
+<p>
+Y sobre todo, quiero que sepas algo:
+</p>
+
+<p style="text-align:center;font-size:24px;">
+<b>
+No quiero a nadie más que a ti. ❤️
+</b>
+</p>
+
+<p>
+No quiero buscar a otra persona.
+No quiero reemplazarte.
+Quiero demostrarte que lo que siento por ti
+es verdadero y que estoy dispuesto/a
+a luchar por aquello que realmente quiero.
+</p>
+
+<p>
+Gracias por ser tú.
+Gracias por todo lo que has sido
+y por todos los momentos que hemos compartido.
+</p>
+
+<p>
+Nunca olvides lo mucho que vales,
+lo especial que eres
+y lo orgulloso/a que estoy de ti.
+</p>
+
+<p>
+Espero que algún día puedas ver en mis acciones
+todo aquello que hoy estoy intentando decirte
+con estas palabras.
+</p>
+
+<p class="signature">
+Con todo mi corazón... ❤️<br>
+🌹
+</p>
+
+</div>
+
+<div class="flower-title">
+🌹 💗 🌹 💗 🌹
+</div>
+
+</section>
+
+</div>
+
+
+<script>
+
+/* CAMBIAR PANTALLAS */
+
+function mostrar(id){
+
+document.querySelectorAll(".screen")
+.forEach(function(screen){
+screen.classList.remove("active");
+});
+
+document.getElementById(id)
+.classList.add("active");
+
+crearCorazones();
+crearRosas();
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+/* CORAZONES */
+
+function crearCorazones(){
+
+for(let i=0;i<10;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=
+["❤️","💗","💕","💖","💞"][Math.floor(Math.random()*5)];
+
+heart.style.left=
+Math.random()*100+"vw";
+
+heart.style.animationDuration=
+(3+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(function(){
+heart.remove();
+},7000);
+
+}
+
+}
+
+
+/* ROSAS */
+
+function crearRosas(){
+
+for(let i=0;i<7;i++){
+
+let rose=document.createElement("div");
+
+rose.className="rose";
+
+rose.innerHTML="🌹";
+
+rose.style.left=
+Math.random()*100+"vw";
+
+rose.style.animationDuration=
+(4+Math.random()*5)+"s";
+
+document.body.appendChild(rose);
+
+setTimeout(function(){
+rose.remove();
+},9000);
+
+}
+
+}
+
+
+/* EFECTO INICIAL */
+
+setTimeout(function(){
+
+crearCorazones();
+crearRosas();
+
+},500);
+
+</script>
+
+</body>
+</html>
